@@ -8,8 +8,7 @@ class ProductModel {
   final String category;
   final String image;
   final RatingModel ratingModel;
-  
-  
+
   ProductModel({
     required this.id,
     required this.title,
