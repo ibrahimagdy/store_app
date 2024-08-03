@@ -45,12 +45,14 @@ class Api{
         {'Authorization': 'Bearer $token'},
       );
     }
+    print('url = $url body = $body token = $token ');
     http.Response response = await http.put(
         Uri.parse(url),
         body: body,
         headers: headers
     );
     if(response.statusCode == 200){
+      print(jsonDecode(response.body));
       return jsonDecode(response.body);
     }
     else{
